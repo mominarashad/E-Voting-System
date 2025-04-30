@@ -1,0 +1,145 @@
+/* Global */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0d0d0d;
+  color: #ffffff; /* Bright white text */
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #111111;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff; /* Bright */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+/* Styling for links inside navbar */
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff; /* Bright */
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+/* Styling for buttons acting as links */
+.nav-links li button.nav-button {
+  background: none;
+  border: none;
+  color: #ffffff; /* Match link color */
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  transition: color 0.3s;
+}
+
+/* Hover effects for both links and buttons */
+.nav-links li a:hover,
+.nav-links li button.nav-button:hover {
+  color: #9b5de5; /* Purple highlight */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px 80px;
+  background: linear-gradient(to right, #111, #1a1a1a);
+}
+
+.hero h1 {
+  font-size: 46px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out forwards;
+  color: #ffffff; /* Strong white */
+}
+
+.hero p {
+  font-size: 22px;
+  color: #eeeeee; /* Brighter text */
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #9b5de5;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #ffffff; /* Button text bright */
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #7b2cbf;
+}
+
+/* Info Sections */
+.info-section {
+  padding: 80px 40px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.info-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #ffffff; /* Bright heading */
+}
+
+.info-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 30px;
+  width: 260px;
+  border-radius: 16px;
+  transition: transform 0.3s;
+  box-shadow: 0 0 10px rgba(155, 93, 229, 0.2);
+  color: #f1f1f1; /* Brighter card text */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card i {
+  margin-bottom: 15px;
+  color: #9b5de5; /* Icon color */
+}
+
+/* Darker Section */
+.dark-section {
+  background: #151515;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

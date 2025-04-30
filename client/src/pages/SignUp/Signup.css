@@ -1,0 +1,126 @@
+/* General Body and Layout */
+body {
+  font-family: 'Poppins', 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0e0e0e, #1b1b1b);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: #e0e0e0;
+}
+
+/* Form Styling */
+form {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  width: 90%;
+  max-width: 1100px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Title Styling */
+.form-title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #00bfa6; /* teal accent */
+  margin-bottom: 20px;
+}
+
+/* Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Column Styling */
+.form-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 15px;
+  color: #ccc;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: #262626;
+  color: #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #00bfa6;
+  background-color: #2e2e2e;
+  transform: scale(1.02);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #00bfa6, #009e8c);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #009e8c, #007e72);
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Video and Captured Image */
+video, img {
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.85);
+}
+
+/* Camera Section */
+.camera-section {
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Smooth Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

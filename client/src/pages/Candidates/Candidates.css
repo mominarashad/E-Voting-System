@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  .candidate-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #00d1b2;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  /* Grid layout with 3 columns on large, 2 on medium, 1 on small screens */
+  .candidate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  @media (max-width: 992px) {
+    .candidate-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .candidate-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  .candidate-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 0.5s ease forwards;
+    opacity: 0;
+  }
+  
+  .candidate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2);
+  }
+  
+  .candidate-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .candidate-info {
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* vertical spacing */
+  }
+  
+  .candidate-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+  }
+  
+  .candidate-age,
+  .candidate-party {
+    font-size: 1em;
+    margin: 0;
+  }
+  
+  .candidate-age {
+    color: #cccccc;
+  }
+  
+  .candidate-party {
+    color: #00d1b2;
+    font-weight: 500;
+  }
+  
+  
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .candidate-card:nth-child(1) { animation-delay: 0.1s; }
+  .candidate-card:nth-child(2) { animation-delay: 0.2s; }
+  .candidate-card:nth-child(3) { animation-delay: 0.3s; }
+  .candidate-card:nth-child(4) { animation-delay: 0.4s; }
+  .candidate-card:nth-child(5) { animation-delay: 0.5s; }
+  .candidate-card:nth-child(6) { animation-delay: 0.6s; }
+  .candidate-card:nth-child(7) { animation-delay: 0.7s; }
+  .candidate-card:nth-child(8) { animation-delay: 0.8s; }
+  
